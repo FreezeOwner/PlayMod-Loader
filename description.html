@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png"> <!-- Favicon -->
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="PlayMod Logo" class="logo"> <!-- Logo at the top -->
+        <h1 id="keyTitle"></h1>
+        <p id="description"></p>
+        <h2 id="price"></h2>
+        <a id="buyButton" href="https://t.me/PlayMod0wner" target="_blank">Buy Now on Telegram</a>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type');
+            
+            const descriptions = {
+                "Day": "Get a 24-hour access key to PlayMod's BGMI loader. Experience enhanced aim assist, wallhacks, and ESP for a single day.",
+                "Week": "Unlock a full week of PlayMod features, including aimbot precision, radar hacks, and enemy tracking. Stay ahead in BGMI matches!",
+                "15 Days": "Enjoy two weeks of PlayMod’s BGMI mod. Dominate your enemies with advanced features like auto headshot, no recoil, and instant kill!",
+                "Month": "Get 30 days of PlayMod’s BGMI loader. Includes premium features like rapid-fire, anti-ban protection, and full ESP hacks.",
+                "Season": "Go pro with a full season key! Access premium BGMI hacks like god mode, speed boost, and secure anti-detection for uninterrupted gameplay."
+            };
+
+            const prices = {
+                "Day": "₹150",
+                "Week": "₹499",
+                "15 Days": "₹599",
+                "Month": "₹1099",
+                "Season": "₹1599"
+            };
+            
+            document.getElementById('keyTitle').textContent = `${type} Key - PlayMod Loader`;
+            document.getElementById('description').textContent = descriptions[type] || "Choose a valid option.";
+            document.getElementById('price').textContent = `Price: ${prices[type] || "N/A"}`;
+        });
+    </script>
+</body>
+</html>

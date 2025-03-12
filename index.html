@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayMod Loader Key</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png"> <!-- Favicon -->
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="PlayMod Logo" class="logo"> <!-- Logo at the top -->
+        <h1>Buy PlayMod Loader Key</h1>
+        <p>Select your preferred key duration:</p>
+
+        <div class="key-option" onclick="goToDescription('Day')">
+            <img src="day.png" alt="Day Key">
+            <button>Day Key - ₹150</button>
+        </div>
+
+        <div class="key-option" onclick="goToDescription('Week')">
+            <img src="week.png" alt="Week Key">
+            <button>Week Key - ₹499</button>
+        </div>
+
+        <div class="key-option" onclick="goToDescription('15 Days')">
+            <img src="15days.png" alt="15 Days Key">
+            <button>15 Days Key - ₹599</button>
+        </div>
+
+        <div class="key-option" onclick="goToDescription('Month')">
+            <img src="month.png" alt="Month Key">
+            <button>30 Days Key - ₹1099</button>
+        </div>
+
+        <div class="key-option" onclick="goToDescription('Season')">
+            <img src="season.png" alt="Season Key">
+            <button>Full Season Key - ₹1599</button>
+        </div>
+    </div>
+    
+    <script>
+        function goToDescription(type) {
+            window.location.href = `description.html?type=${encodeURIComponent(type)}`;
+        }
+    </script>
+</body>
+</html>
